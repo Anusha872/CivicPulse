@@ -1,0 +1,310 @@
+@charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Inter', sans-serif;
+}
+
+body {
+	background-color: #13171A;
+	color: #f3f4f6;
+}
+
+.main {
+	padding: 40px;
+	max-width: 1200px;
+	margin-left: 270px;
+}
+
+.header {
+	margin-bottom: 30px;
+}
+
+.header h1 {
+	font-size: 28px;
+	font-weight: 700;
+	margin-bottom: 6px;
+}
+
+.header p {
+	color: #75787D;
+	font-size: 14px;
+}
+
+.header hr {
+	border: none;
+	border-top: 1px solid #CFD3D6;
+	margin-top: 20px;
+	max-width: 600px;
+}
+
+.issue-stats {
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+	margin-bottom: 32px;
+}
+
+.stat {
+	background: #212224;
+	border: 1px solid #323639;
+	border-radius: 10px;
+	padding: 28px 32px;
+	flex: 1;
+	min-width: 0;
+}
+
+.stat p {
+	font-size: 12px;
+	color: #75787D;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin-bottom: 6px;
+}
+
+.stat h2 {
+	font-size: 26px;
+	font-weight: 700;
+	color: #f3f4f6;
+}
+
+.stat h2.unpaid {
+	color: #D35400;
+}
+
+.stat h2.paid {
+	color: #22c55e;
+}
+
+.card {
+	background-color: #212224;
+	border-radius: 12px;
+	border: 1px solid #323639;
+	padding: 24px;
+	margin-bottom: 40px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 24px;
+	border-bottom: 1px solid white;
+	padding-bottom: 16px;
+	margin-left: -24px;
+	margin-right: -24px;
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+.card-header h3 {
+	color: white;
+	font-weight: 500;
+	font-size: 16px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+.side {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 16px;
+	margin-top: 16px;
+}
+
+form label {
+	font-size: 11px;
+	font-weight: 600;
+	color: #75787D;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin-bottom: 8px;
+	margin-top: 16px;
+	display: block;
+}
+
+.form-design {
+	background-color: #212224;
+	border: 1px solid #323639;
+	border-radius: 8px;
+	padding: 12px 16px;
+	color: #f3f4f6;
+	font-size: 14px;
+	outline: none;
+	transition: border-color 0.2s;
+	width: 100%;
+}
+
+.form-design:focus {
+	border-color: #D35400;
+}
+
+textarea.form-design {
+	resize: vertical;
+	min-height: 80px;
+}
+
+select.form-design option {
+	background: #212224;
+}
+
+.form-button {
+	padding: 10px 20px;
+	border-radius: 6px;
+	font-size: 13.5px;
+	font-weight: 600;
+	cursor: pointer;
+	border: none;
+	background-color: #D35400;
+	color: white;
+	align-self: flex-start;
+	margin-top: 24px;
+	transition: all 0.2s;
+}
+
+.form-button:hover {
+	background-color: #b94a00;
+}
+
+.manage-listings {
+	margin-bottom: 40px;
+}
+
+.list-head h3 {
+	font-size: 20px;
+	font-weight: 600;
+	color: white;
+}
+
+.divider {
+	border: none;
+	border-top: 1px solid #323639;
+	margin-top: 16px;
+	margin-bottom: 20px;
+}
+
+.list-card {
+	background-color: #212224;
+	border: 1px solid #323639;
+	border-radius: 8px;
+	padding: 18px 24px;
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.list-card:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+	border-color: #555;
+}
+
+.list-info h4 {
+	font-size: 15px;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 6px;
+	color: #f3f4f6;
+}
+
+.status-unpaid {
+	font-size: 10px;
+	font-weight: 700;
+	padding: 3px 8px;
+	border-radius: 12px;
+	background-color: rgba(211, 84, 0, 0.2);
+	color: #D35400;
+	text-transform: uppercase;
+}
+
+.status-paid {
+	font-size: 10px;
+	font-weight: 700;
+	padding: 3px 8px;
+	border-radius: 12px;
+	background-color: rgba(34, 197, 94, 0.15);
+	color: #22c55e;
+	text-transform: uppercase;
+}
+
+.listing-meta {
+	display: flex;
+	gap: 16px;
+	font-size: 12px;
+	color: #75787D;
+	align-items: center;
+}
+
+.amount {
+	font-weight: 700;
+	color: #f3f4f6;
+}
+
+.list-actions {
+	display: flex;
+	gap: 8px;
+}
+
+.mark {
+	padding: 7px 14px;
+	font-size: 12px;
+	border-radius: 6px;
+	border: none;
+	font-weight: 600;
+	cursor: pointer;
+	background-color: rgba(34, 197, 94, 0.15);
+	color: #22c55e;
+	transition: all 0.2s;
+}
+
+.mark:hover {
+	background-color: rgba(34, 197, 94, 0.3);
+}
+
+.delete {
+	padding: 7px 14px;
+	font-size: 12px;
+	border-radius: 6px;
+	border: none;
+	font-weight: 600;
+	cursor: pointer;
+	background-color: #7f1d1d;
+	color: white;
+	transition: all 0.2s;
+}
+
+.delete:hover {
+	background-color: #991b1b;
+}
+
+@media ( max-width : 768px) {
+	.main {
+		margin-left: 0;
+		padding: 16px;
+	}
+	.issue-stats {
+		flex-direction: column;
+	}
+	.side {
+		grid-template-columns: 1fr;
+	}
+	.list-card {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 12px;
+	}
+	.list-actions {
+		width: 100%;
+		justify-content: flex-end;
+	}
+}

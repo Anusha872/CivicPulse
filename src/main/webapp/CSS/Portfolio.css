@@ -1,0 +1,437 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f2f2;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+
+.portfolioContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.mainLayout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Back Button */
+.backBtnBox {
+    margin-bottom: 30px;
+}
+
+.backBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #C05A14; /* Theme Color */
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: background 0.2s;
+}
+
+.backBtn:hover {
+    background-color: #f9f9f9;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 320px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 25px;
+    padding: 20px 30px 50px 30px; /* Reduced top padding */
+    text-align: center;
+    position: sticky;
+    top: 100px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.avatarBox {
+    background-color: #f9f9f9;
+    border-radius: 25px;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 30px;
+    padding: 5px;
+    border: 3px solid #C05A14; /* Theme Color */
+    overflow: hidden;
+}
+
+.avatarImg {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.memberName {
+    font-size: 28px;
+    color: #333333;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.memberRole {
+    display: inline-block;
+    background-color: #f0f0f0;
+    padding: 8px 20px;
+    border-radius: 12px;
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 30px;
+}
+
+.separator {
+    height: 1px;
+    background-color: #eeeeee;
+    margin: 30px 0;
+}
+
+.contactList {
+    list-style: none;
+    text-align: left;
+}
+
+.contactItem {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.contactIcon {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #C05A14; /* Theme Color */
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid #e0e0e0;
+}
+
+.contactLabel {
+    font-size: 11px;
+    color: #999999;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.contactValue {
+    font-size: 14px;
+    color: #444444;
+    word-break: break-all;
+}
+
+/* Content Area */
+.contentArea {
+    flex: 1;
+}
+
+.tabNav {
+    display: none; /* Hide navigation tabs since all content is now stacked and continuously visible */
+}
+
+.tabBtn {
+    background: none;
+    border: none;
+    color: #888888;
+    font-size: 16px;
+    padding: 15px 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tabBtn.active {
+    color: #C05A14; /* Theme Color */
+}
+
+.articlePage {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 25px;
+    padding: 50px;
+    display: block; /* Render all sections continuously stacked */
+    margin-bottom: 40px;
+}
+
+.subTitle {
+    font-size: 26px;
+    color: #333333;
+    margin-bottom: 35px;
+    position: relative;
+    padding-bottom: 12px;
+    font-weight: bold;
+}
+
+.subTitle::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 5px;
+    background-color: #C05A14; /* Theme Color */
+    border-radius: 3px;
+}
+
+.aboutText {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555555;
+    margin-bottom: 45px;
+}
+
+/* Service Grid */
+.serviceGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.serviceItem {
+    background-color: #f9f9f9;
+    border: 1px solid #eeeeee;
+    border-radius: 20px;
+    padding: 35px;
+    display: flex;
+    gap: 20px;
+    transition: transform 0.2s;
+}
+
+.serviceItem:hover {
+    transform: translateY(-5px);
+}
+
+.serviceIconBox {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+}
+
+.serviceItemTitle {
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.serviceItemText {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #777777;
+}
+
+/* Timeline */
+.timelineSection {
+    margin-bottom: 60px;
+}
+
+.timelineTitleBox {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.timelineIcon {
+    width: 45px;
+    height: 45px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #C05A14; /* Theme Color */
+    font-weight: bold;
+}
+
+.timelineList {
+    list-style: none;
+    margin-left: 65px;
+    border-left: 2px solid #eeeeee;
+    padding-left: 45px;
+}
+
+.timelineItem {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.timelineItem::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: -55px; /* Perfect horizontal center on the 2px vertical line */
+    width: 10px;
+    height: 10px;
+    background-color: #C05A14; /* Theme Color */
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-sizing: content-box; /* Ensures the core dot is exactly 10px + 4px border in all browsers */
+}
+
+.timelineItemTitle {
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.timelineDate {
+    display: block;
+    color: #C05A14; /* Theme Color */
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.timelineText {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #666666;
+}
+
+/* CV Download */
+.cvDownloadSection {
+    margin-bottom: 50px;
+}
+
+.cvDownloadBox {
+    background-color: #f9f9f9;
+    border: 1px solid #eeeeee;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.cvIconBox {
+    width: 64px;
+    height: 64px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.cvInfoBox {
+    flex: 1;
+}
+
+.cvTitle {
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.cvText {
+    font-size: 15px;
+    color: #777777;
+    line-height: 1.5;
+}
+
+.cvDownloadBtn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 25px;
+    background-color: #C05A14;
+    color: #ffffff;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(192, 90, 20, 0.2);
+    transition: background 0.2s;
+}
+
+.cvDownloadBtn:hover {
+    background-color: #a84c0f;
+}
+
+@media (max-width: 600px) {
+    .cvDownloadBox {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+/* Skills */
+.skillsSection {
+    background-color: #f9f9f9;
+    border: 1px solid #eeeeee;
+    border-radius: 25px;
+    padding: 50px;
+}
+
+.skillItem {
+    margin-bottom: 35px;
+}
+
+.skillInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.skillName {
+    font-size: 16px;
+    color: #333333;
+    font-weight: bold;
+}
+
+.skillPercent {
+    font-size: 16px;
+    color: #666666;
+}
+
+.skillBarBg {
+    height: 10px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skillBarFill {
+    height: 100%;
+    background-color: #C05A14; /* Theme Color */
+    border-radius: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1100px) {
+    .mainLayout {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        position: static;
+    }
+}

@@ -1,0 +1,243 @@
+body {
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*  Layout */
+.mainContent {
+    margin-left: 250px;
+    padding-top: 70px;
+    min-height: 900px;
+    transition: margin-left 0.3s ease;
+}
+
+/* Container */
+.pollsContainer {
+    width: 1000px;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 48px 32px 48px;
+}
+
+/* List */
+.pollsList {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 960px;
+    max-width: 960px;
+    margin-top: 0px;
+}
+
+/* Card */
+.pollCard {
+    width: 960px;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+/* Poll Text */
+.pollContent {
+    flex: 1;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-right: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Title */
+.pollTitle {
+    font-size: 22px;
+    font-weight: 500;
+    color: #111111;
+    margin-top: 0px;
+    margin-bottom: 12px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+/* Description */
+.pollDescription {
+    font-size: 14px;
+    line-height: 22px;
+    color: #444444;
+    margin: 0px;
+}
+
+/* Poll Buttons */
+.pollActions {
+    width: 160px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background-color: #ffffff;
+}
+
+/* Button */
+.pollBtn {
+    width: 120px;
+    height: 44px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    letter-spacing: 0.2px;
+}
+
+/* Yes Button */
+.btnYes {
+    background: linear-gradient(135deg, #ff9a6c, #e8724a);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(232, 114, 74, 0.35);
+}
+
+.btnYes:hover {
+    background: linear-gradient(135deg, #ffaa80, #e06030);
+    box-shadow: 0 6px 16px rgba(232, 114, 74, 0.45);
+    transform: translateY(-1px);
+}
+
+.btnYes:active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 8px rgba(232, 114, 74, 0.3);
+}
+
+/* No Button */
+.btnNo {
+    background: linear-gradient(135deg, #6b6b6b, #4a4a4a);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btnNo:hover {
+    background: linear-gradient(135deg, #7a7a7a, #555555);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+}
+
+.btnNo:active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Voted label*/
+.votedLabel {
+    font-size: 13px;
+    color: #555555;
+    text-align: center;
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+}
+
+.votedLabel strong {
+    color: #e8724a;
+    display: block;
+    font-size: 15px;
+    margin-top: 2px;
+}
+
+/* Unvote button */
+.btnUnvote {
+    background: #ffffff;
+    color: #e8724a;
+    border: 1.5px solid #e8724a;
+    box-shadow: none;
+}
+
+.btnUnvote:hover {
+    background: #fff1eb;
+    transform: translateY(-1px);
+}
+
+.btnUnvote:active {
+    transform: translateY(0px);
+}
+
+/* Vote progress bar */
+.voteBar {
+    width: 100%;
+    height: 6px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    margin-top: 14px;
+    overflow: hidden;
+}
+
+.voteBarFill {
+    height: 100%;
+    border-radius: 4px;
+    background-color: #e88a5d;
+    transition: width 0.4s ease;
+}
+
+/* Vote count text */
+.voteCounts {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #888888;
+    margin-top: 6px;
+}
+
+/* Empty state */
+.noPolls {
+    text-align: center;
+    color: #888888;
+    font-size: 15px;
+    margin-top: 60px;
+}
+
+/* Responsive Overrides */
+@media (max-width: 900px) {
+    .mainContent {
+        margin-left: 0px;
+    }
+
+    .pollCard {
+        flex-direction: column;
+    }
+
+    .pollContent {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .pollActions {
+        width: 100%;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .pollBtn {
+        width: 120px;
+    }
+}

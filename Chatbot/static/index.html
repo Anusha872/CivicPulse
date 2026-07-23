@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CivicPulse - AI Community Assistant</title>
+    <!-- Modern Typography Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <div class="app-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon"><i class="fa-solid fa-building-columns"></i></div>
+                <div class="brand-text">Civic<strong>Pulse</strong></div>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active">
+                    <i class="fa-solid fa-robot"></i>
+                    <span>AI Front Desk</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-bullhorn"></i>
+                    <span>File Complaint</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-id-card"></i>
+                    <span>Lost & Found</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-landmark"></i>
+                    <span>Govt Guidance</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="system-status">
+                    <span class="status-dot"></span>
+                    <span>AI Assistant Online</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Assistant Interface -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-title">
+                    <h1>CivicPulse AI Front Desk Assistant</h1>
+                    <p>Ask about filing complaints, lost identity documents, or government office paperwork guidance.</p>
+                </div>
+                <div class="header-actions">
+                    <button id="reset-main-chat" class="btn-secondary" title="Start New Conversation">
+                        <i class="fa-solid fa-rotate-right"></i> New Chat
+                    </button>
+                </div>
+            </header>
+
+            <!-- Safety Banner -->
+            <div class="security-disclaimer">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Notice: Official document verification & claim approvals are strictly conducted by human administrators.</span>
+            </div>
+
+            <!-- Central Chat Container -->
+            <div class="chat-container">
+                <!-- Messages Box -->
+                <div id="main-chat-messages" class="messages-viewport">
+                    <!-- Initial Welcome Greeting -->
+                    <div class="msg-row model">
+                        <div class="avatar"><i class="fa-solid fa-robot"></i></div>
+                        <div class="bubble">
+                            <p class="greeting-heading">Hi! 👋 How can I help you today?</p>
+                            <p>I am your warm and helpful CivicPulse Assistant. You can ask me to:</p>
+                            <ul>
+                                <li><strong>File a civic complaint</strong> (potholes, streetlights, sanitation, water issues)</li>
+                                <li><strong>Report or search lost documents</strong> (citizenship certificates, passports, licenses)</li>
+                                <li><strong>Find government office guidance</strong> & step-by-step paperwork instructions</li>
+                            </ul>
+                            <p class="follow-up-tip">Feel free to type your question below or click one of the quick suggestions!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Suggestion Action Chips -->
+                <div class="suggestion-bar">
+                    <button class="chip" data-query="How do I file a complaint about broken streetlights?">
+                        <i class="fa-solid fa-lightbulb"></i> Broken Streetlights
+                    </button>
+                    <button class="chip" data-query="I lost my driving license yesterday. How can I report it?">
+                        <i class="fa-solid fa-id-card"></i> Lost Driving License
+                    </button>
+                    <button class="chip" data-query="Which government office issues citizenship certificates and what documents do I need?">
+                        <i class="fa-solid fa-landmark"></i> Citizenship Paperwork Office
+                    </button>
+                    <button class="chip" data-query="How does identity document verification work on CivicPulse?">
+                        <i class="fa-solid fa-shield-check"></i> Verification FAQ
+                    </button>
+                </div>
+
+                <!-- Chat Input Form -->
+                <form id="main-chat-form" class="input-composer">
+                    <input 
+                        type="text" 
+                        id="main-user-input" 
+                        placeholder="Type a message (e.g. 'Hi, I want to file a complaint...')" 
+                        autocomplete="off"
+                        required 
+                    />
+                    <button type="submit" id="main-send-btn" class="send-button">
+                        <span>Send</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="/script.js"></script>
+</body>
+</html>

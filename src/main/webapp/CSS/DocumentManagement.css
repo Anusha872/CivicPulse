@@ -1,0 +1,437 @@
+@charset "UTF-8";
+
+/* ===== PAGE HEADER ===== */
+.docPageHeader {
+	margin-bottom: 24px;
+}
+
+.docPageTitle {
+	font-size: 28px;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.docDivider {
+	height: 1px;
+	background-color: #323639;
+	margin-bottom: 28px;
+	border: none;
+}
+
+/* ===== TWO COLUMN LAYOUT ===== */
+.docTwoColumn {
+	display: flex;
+	gap: 28px;
+	align-items: flex-start;
+}
+
+.docLeftColumn {
+	flex: 1;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 28px;
+}
+
+.docRightColumn {
+	width: 320px;
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+/* ===== TABLE CARDS ===== */
+.docTableCard {
+	background-color: #212224;
+	border: 1px solid #323639;
+	border-radius: 10px;
+	padding: 24px;
+}
+
+.docTableTitle {
+	font-size: 18px;
+	font-weight: 700;
+	color: #ffffff;
+	margin-bottom: 20px;
+}
+
+.docTable {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.docTable thead th {
+	font-size: 11px;
+	font-weight: 700;
+	color: #75787D;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	text-align: left;
+	padding: 0 12px 14px 12px;
+	border-bottom: 1px solid #323639;
+}
+
+.docTable tbody td {
+	font-size: 14px;
+	color: #ffffff;
+	padding: 16px 12px;
+	border-bottom: 1px solid #1a1c1e;
+}
+
+.docTable tbody tr:last-child td {
+	border-bottom: none;
+}
+
+.docActionCell {
+	text-align: right;
+	display: flex;
+	gap: 8px;
+	justify-content: flex-end;
+}
+
+/* Table Buttons */
+.buttonDocAccept {
+	background-color: #37C63F;
+	color: #ffffff;
+	border: none;
+	border-radius: 6px;
+	padding: 6px 16px;
+	font-size: 12px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.buttonDocAccept:hover {
+	background-color: #059669;
+}
+
+.buttonDocReject {
+	background-color: #7f1d1d;
+	color: #ffffff;
+	border: 1px solid #991b1b;
+	border-radius: 6px;
+	padding: 6px 16px;
+	font-size: 12px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.buttonDocReject:hover {
+	background-color: #991b1b;
+}
+
+.buttonDocEdit {
+	background-color: #323639;
+	color: #ffffff;
+	border: none;
+	border-radius: 6px;
+	padding: 6px 20px;
+	font-size: 12px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.buttonDocEdit:hover {
+	background-color: #4a4d51;
+}
+
+/* ===== SIDE CARDS ===== */
+.docSideCard {
+	background-color: #212224;
+	border: 1px solid #323639;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.docSideCardTitle {
+	font-size: 16px;
+	font-weight: 700;
+	color: #ffffff;
+	margin-bottom: 16px;
+}
+
+/* Filter */
+.docFilterRow {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 0;
+	border-bottom: 1px solid #1a1c1e;
+}
+
+.docFilterRow:last-child {
+	border-bottom: none;
+}
+
+.docFilterLabel {
+	font-size: 14px;
+	color: #CFD3D6;
+}
+
+.docCheckbox {
+	width: 18px;
+	height: 18px;
+	cursor: pointer;
+	accent-color: #D35400;
+}
+
+/* Activity */
+.docActivityRow {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.docActivityText {
+	font-size: 13px;
+	color: #CFD3D6;
+	line-height: 1.5;
+}
+
+.docActivityLink {
+	font-size: 13px;
+	color: #D35400;
+	text-decoration: none;
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+.docActivityLink:hover {
+	color: #e65c00;
+}
+
+/* ===== MODAL STYLES ===== */
+.modalOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.85);
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 2000;
+}
+
+.modalBox {
+	background: #212224;
+	border: 1px solid #323639;
+	border-radius: 12px;
+	width: 520px;
+	overflow: hidden;
+}
+
+.modalHeaderSuccess {
+	background-color: #064e3b;
+	padding: 20px 24px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	border-radius: 12px 12px 0 0;
+}
+
+.modalHeaderSuccess h2 {
+	color: white;
+	font-size: 18px;
+	font-weight: 600;
+	margin: 0;
+}
+
+.modalHeaderDanger {
+	background-color: #7f1d1d;
+	padding: 20px 24px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	border-radius: 12px 12px 0 0;
+}
+
+.modalHeaderDanger h2 {
+	color: white;
+	font-size: 18px;
+	font-weight: 600;
+	margin: 0;
+}
+
+.modalHeaderEdit {
+	background-color: #1e3a5f;
+	padding: 20px 24px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	border-radius: 12px 12px 0 0;
+}
+
+.modalHeaderEdit h2 {
+	color: white;
+	font-size: 18px;
+	font-weight: 600;
+	margin: 0;
+}
+
+.modalBodyContent {
+	padding: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.modalDescriptionText {
+	color: #CFD3D6;
+	font-size: 14px;
+	line-height: 1.6;
+	margin: 0;
+}
+
+.modalFooterActions {
+	padding: 16px 24px 20px 24px;
+	border-top: 1px solid #323639;
+	display: flex;
+	justify-content: flex-end;
+	gap: 12px;
+}
+
+/* Form Elements */
+.docFormGroup {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.docFormLabel {
+	font-size: 11px;
+	font-weight: 700;
+	color: #75787D;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.docFormInput {
+	background-color: #131517;
+	border: 1px solid #323639;
+	border-radius: 8px;
+	padding: 12px 14px;
+	color: #ffffff;
+	font-size: 14px;
+	outline: none;
+	transition: border-color 0.2s;
+}
+
+.docFormInput:focus {
+	border-color: #D35400;
+}
+
+.docFormTextarea {
+	background-color: #131517;
+	border: 1px solid #323639;
+	border-radius: 8px;
+	padding: 12px 14px;
+	color: #ffffff;
+	font-size: 14px;
+	outline: none;
+	resize: none;
+	min-height: 110px;
+	transition: border-color 0.2s;
+}
+
+.docFormTextarea:focus {
+	border-color: #D35400;
+}
+
+/* Modal Buttons */
+.buttonModalCancel {
+	background-color: #323639;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	padding: 10px 20px;
+	font-weight: 600;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.buttonModalCancel:hover {
+	background-color: #4a4d51;
+}
+
+.buttonModalAccept {
+	background-color: #10b981;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	padding: 10px 20px;
+	font-weight: 600;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.buttonModalAccept:hover {
+	background-color: #059669;
+}
+
+.buttonModalDanger {
+	background-color: #ef4444;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	padding: 10px 20px;
+	font-weight: 600;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.buttonModalDanger:hover {
+	background-color: #dc2626;
+}
+
+.buttonModalEdit {
+	background-color: #D35400;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	padding: 10px 20px;
+	font-weight: 600;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.buttonModalEdit:hover {
+	background-color: #e65c00;
+}
+
+.barsRed .bar {
+	background-color: #ef4444;
+}
+
+@media ( max-width : 768px) {
+	.docTwoColumn {
+		flex-direction: column;
+	}
+	.docRightColumn {
+		width: 100%;
+	}
+	.docTableCard {
+		padding: 16px;
+		overflow-x: auto;
+	}
+	.docTable {
+		min-width: 500px;
+	}
+	.modalBox {
+		width: 100%;
+		margin: 16px;
+	}
+	.modalBodyContent, .modalFooterActions {
+		padding: 16px;
+	}
+}

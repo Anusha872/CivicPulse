@@ -1,0 +1,489 @@
+@charset "UTF-8";
+
+/* ==========================================
+   NEWS MANAGEMENT STYLES
+   No calc(), no gradients, camelCase only.
+   ========================================== */
+
+/* ===== PAGE HEADER ===== */
+.newsPageHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 16px;
+}
+
+.newsPageTitle {
+	font-size: 28px;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.buttonCreateNews {
+	background-color: #D35400;
+	color: #ffffff;
+	border: none;
+	border-radius: 8px;
+	padding: 10px 24px;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.buttonCreateNews:hover {
+	background-color: #e65c00;
+}
+
+.newsDivider {
+	height: 1px;
+	background-color: #323639;
+	margin-bottom: 28px;
+	border: none;
+}
+
+/* ===== NEWS PREVIEW CARDS ===== */
+.newsPreviewGrid {
+	display: flex;
+	gap: 20px;
+	margin-bottom: 36px;
+}
+
+.newsPreviewCard {
+	flex: 1;
+	background-color: #212224;
+	border: 1px solid #323639;
+	border-radius: 12px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	transition: border-color 0.2s;
+}
+
+.newsPreviewCard:hover {
+	border-color: #D35400;
+}
+
+.newsPreviewImage {
+	height: 200px;
+	width: 100%;
+	object-fit: cover;
+	flex-shrink: 0;
+}
+
+.previewBlue {
+	background-color: #a8b4c8;
+}
+
+.previewYellow {
+	background-color: #e8dbb5;
+}
+
+.previewPink {
+	background-color: #e8c8c8;
+}
+
+.newsPreviewBody {
+	padding: 16px;
+}
+
+.newsPreviewTitle {
+	font-size: 15px;
+	font-weight: 600;
+	color: #ffffff;
+	margin-bottom: 6px;
+}
+
+.newsPreviewSnippet {
+	font-size: 12px;
+	color: #75787D;
+	line-height: 1.5;
+	margin-bottom: 8px;
+}
+
+.newsPreviewTime {
+	font-size: 11px;
+	color: #75787D;
+	font-weight: 500;
+}
+
+/* ===== NEWS LIST SECTION ===== */
+.newsListHeader {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 20px;
+}
+
+.newsListTitle {
+	font-size: 20px;
+	font-weight: 700;
+	color: #ffffff;
+	margin: 0;
+}
+
+.newsPillBadge {
+	font-size: 11px;
+	padding: 4px 10px;
+	background-color: #323639;
+	border-radius: 12px;
+	color: #CFD3D6;
+	font-weight: 600;
+}
+
+.newsListContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 9px;
+	padding: 0 24px 24px 24px;
+}
+
+.newsListHeader {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 20px;
+	padding: 0 24px;
+}
+
+.newsRow {
+	background-color: #212224;
+	border: 1px solid #323639;
+	border-radius: 10px;
+	padding: 18px 24px;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	transition: border-color 0.2s;
+}
+
+.newsRow:hover {
+	border-color: #D35400;
+}
+
+.newsIconWrap {
+	width: 44px;
+	height: 44px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	border-radius: 8px;
+	background-color: #151821;
+	border: 1px solid #323639;
+}
+
+.newsMetaRow {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-top: 4px;
+}
+
+.newsCategoryBadge {
+	font-size: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.6px;
+	padding: 3px 9px;
+	border-radius: 4px;
+	background-color: #323639;
+	color: #CFD3D6;
+}
+
+.newsCategoryBadge.featured {
+	background-color: #323639;
+	color: #CFD3D6;
+	border: 1px solid #323639;
+}
+
+.newsCategoryBadge.normal {
+	background-color: #1e3a5f;
+	color: #93c5fd;
+	border: 1px solid #1e40af;
+}
+
+.newsInfo {
+	flex: 1;
+}
+
+.newsInfo h4 {
+	font-size: 15px;
+	font-weight: 600;
+	color: #ffffff;
+	margin-bottom: 4px;
+}
+
+.newsInfo p {
+	font-size: 12px;
+	color: #D35400;
+}
+
+/* Action Buttons */
+.newsActions {
+	display: flex;
+	gap: 10px;
+	flex-shrink: 0;
+}
+
+.buttonNewsEdit {
+	background-color: #323639;
+	color: #ffffff;
+	border: none;
+	border-radius: 6px;
+	padding: 8px 18px;
+	font-size: 12px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.buttonNewsEdit:hover {
+	background-color: #4a4d51;
+}
+
+.buttonNewsDelete {
+	background-color: #7f1d1d;
+	color: #ffffff;
+	border: none;
+	border-radius: 6px;
+	padding: 8px 18px;
+	font-size: 12px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.buttonNewsDelete:hover {
+	background-color: #991b1b;
+}
+
+/* ===== MODAL STYLES ===== */
+.modalOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.85);
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 2000;
+}
+
+.modalBox {
+	background: #212224;
+	border: 1px solid #323639;
+	border-radius: 12px;
+	width: 480px;
+	overflow: hidden;
+}
+
+.modalHeaderCreate {
+	background-color: #212224;
+	padding: 20px 24px;
+	border-bottom: 1px solid #323639;
+}
+
+.modalHeaderCreate h2 {
+	color: white;
+	font-size: 18px;
+	font-weight: 600;
+	margin: 0;
+}
+
+.modalHeaderEdit {
+	background-color: #1e3a5f;
+	padding: 20px 24px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	border-radius: 12px 12px 0 0;
+}
+
+.modalHeaderEdit h2 {
+	color: white;
+	font-size: 18px;
+	font-weight: 600;
+	margin: 0;
+}
+
+.modalHeaderDanger {
+	background-color: #7f1d1d;
+	padding: 20px 24px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	border-radius: 12px 12px 0 0;
+}
+
+.modalHeaderDanger h2 {
+	color: white;
+	font-size: 18px;
+	font-weight: 600;
+	margin: 0;
+}
+
+.modalBodyContent {
+	padding: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.modalDescriptionText {
+	color: #CFD3D6;
+	font-size: 14px;
+	line-height: 1.6;
+	margin: 0;
+}
+
+.modalFooterActions {
+	padding: 16px 24px 20px 24px;
+	border-top: 1px solid #323639;
+	display: flex;
+	justify-content: flex-end;
+	gap: 12px;
+}
+
+/* Form Elements */
+.newsFormGroup {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.newsFormLabel {
+	font-size: 11px;
+	font-weight: 700;
+	color: #75787D;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.newsFormInput {
+	background-color: #131517;
+	border: 1px solid #323639;
+	border-radius: 8px;
+	padding: 12px 14px;
+	color: #ffffff;
+	font-size: 14px;
+	outline: none;
+	transition: border-color 0.2s;
+}
+
+.newsFormInput:focus {
+	border-color: #D35400;
+}
+
+.newsFormTextarea {
+	background-color: #131517;
+	border: 1px solid #323639;
+	border-radius: 8px;
+	padding: 12px 14px;
+	color: #ffffff;
+	font-size: 14px;
+	outline: none;
+	resize: none;
+	min-height: 140px;
+	transition: border-color 0.2s;
+}
+
+.newsFormTextarea:focus {
+	border-color: #D35400;
+}
+
+/* Modal Buttons */
+.buttonPostNews {
+	background-color: #D35400;
+	color: #ffffff;
+	border: none;
+	border-radius: 8px;
+	padding: 10px 24px;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.buttonPostNews:hover {
+	background-color: #e65c00;
+}
+
+.buttonModalCancel {
+	background-color: #323639;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	padding: 10px 20px;
+	font-weight: 600;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.buttonModalCancel:hover {
+	background-color: #4a4d51;
+}
+
+.buttonModalSuccess {
+	background-color: #D35400;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	padding: 10px 20px;
+	font-weight: 600;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.buttonModalSuccess:hover {
+	background-color: #e65c00;
+}
+
+.buttonModalDanger {
+	background-color: #ef4444;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	padding: 10px 20px;
+	font-weight: 600;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.buttonModalDanger:hover {
+	background-color: #dc2626;
+}
+
+@media ( max-width : 768px) {
+	.newsPageHeader {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 12px;
+	}
+	.buttonCreateNews {
+		width: 100%;
+	}
+	.newsPreviewGrid {
+		flex-direction: column;
+	}
+	.newsRow {
+		flex-wrap: wrap;
+		gap: 12px;
+	}
+	.newsActions {
+		width: 100%;
+		justify-content: flex-end;
+	}
+	.modalBox {
+		width: 100%;
+		margin: 16px;
+	}
+	.modalBodyContent, .modalFooterActions {
+		padding: 16px;
+	}
+}

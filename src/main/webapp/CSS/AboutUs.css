@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333333;
+    overflow: hidden; 
+}
+
+.mainLayout {
+    display: flex;
+    height: 100%;
+    padding-left: 250px; 
+    box-sizing: border-box;
+}
+
+.mainContent {
+    flex: 1;
+    height: 100%;
+    padding-top: 70px; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    overflow-y: auto; 
+    box-sizing: border-box;
+}
+
+.aboutContainer {
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px 40px 50px 40px; 
+    box-sizing: border-box;
+}
+
+.pageTitle {
+    font-size: 32px;
+    color: #C05A14; 
+    text-align: center;
+    margin-bottom: 80px; 
+    font-weight: bold;
+}
+
+.teamGrid {
+    display: flex;
+    justify-content: center;
+    gap: 32px; 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.memberCard {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 30px 20px; 
+    width: 100%;
+    max-width: 250px; 
+    min-height: 380px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+}
+
+.memberCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.memberImgBox {
+    width: 130px; 
+    height: 130px;
+    border-radius: 65px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    border: 3px solid #C05A14;
+    background-color: #f9f9f9;
+}
+
+.memberImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.memberName {
+    font-size: 22px;
+    color: #333333;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.memberDesc {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.viewPortfolioBtn {
+    margin-top: auto; 
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #C05A14;
+    color: #ffffff;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(192, 90, 20, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .teamGrid {
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 992px) {
+    .mainLayout {
+        padding-left: 0;
+    }
+    .teamGrid {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}

@@ -1,0 +1,47 @@
+node_modules/
+.venv/
+venv/
+__pycache__/
+.git/
+dist/
+build/
+*.csv
+*.json
+
+# Environment variables
+.env
+.env.local
+
+# Chatbot virtual environment
+Chatbot/venv/
+Chatbot/__pycache__/
+
+# IDE
+.settings/
+.classpath
+.project
+
+
+# Environment variables
+.env
+*.env
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Java build output
+target/
+
+# Tomcat server (huge, shouldn't be tracked)
+apache-tomcat-10.1.18/
+
+# Sensitive/local files
+cookies.txt
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store

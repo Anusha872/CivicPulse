@@ -1,0 +1,568 @@
+@charset "UTF-8";
+/* Page Header & Wrapper */
+.issuePageWrapper {
+	max-width: 1040px;
+	margin: 0 auto;
+}
+
+.issuePageHeader {
+	margin-bottom: 24px;
+}
+
+.issuePageTitle {
+	font-size: 32px;
+	font-weight: 700;
+	color: #ffffff;
+	margin-bottom: 4px;
+}
+
+.issuePageSubtitle {
+	font-size: 14px;
+	color: #D35400;
+	font-weight: 500;
+}
+
+.issueDivider {
+	border: 0;
+	height: 1px;
+	background-color: #323639;
+	margin-bottom: 32px;
+	width: 100%;
+}
+
+/* Stat Cards Section (Specific overrides for Issue Management) */
+.issueStatsContainer {
+	display: flex;
+	gap: 24px;
+	margin-bottom: 40px;
+}
+
+.issueStatCard {
+	flex: 1;
+	background-color: #212224;
+	border: 1px solid #323639;
+	border-radius: 10px;
+	padding: 24px 28px;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	height: 120px;
+	transition: transform 0.2s, border-color 0.2s;
+}
+
+.issueStatCard:hover {
+	transform: translateY(-2px);
+	border-color: #CFD3D6;
+}
+
+/* Manage Issues Section Header */
+.sectionTitle {
+	font-size: 20px;
+	font-weight: 600;
+	color: #ffffff;
+	margin-bottom: 24px;
+}
+
+/* Issue List Rows */
+.issueList {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.issueRow {
+	background-color: #212224;
+	border: 1px solid #323639;
+	border-radius: 10px;
+	padding: 20px 28px;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	transition: border-color 0.2s;
+}
+
+.issueRow:hover {
+	border-color: #75787D;
+}
+
+.issueAvatar {
+	width: 44px;
+	height: 44px;
+	background-color: #323639;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+}
+
+.issueAvatar svg {
+	color: #D35400;
+}
+
+.issueDetails {
+	flex: 1;
+}
+
+.issueMeta {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 4px;
+}
+
+.reporterName {
+	font-size: 16px;
+	font-weight: 600;
+	color: #ffffff;
+}
+
+.metaDivider {
+	color: #323639;
+}
+
+.issueTitle {
+	font-size: 14px;
+	color: #CFD3D6;
+}
+
+.submittedTime {
+	font-size: 12px;
+	color: #75787D;
+	margin: 0;
+}
+
+/* Status Badges */
+.statusBadge {
+	padding: 6px 14px;
+	border-radius: 4px;
+	font-size: 11px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.statusBadge.completed {
+	background-color: rgba(16, 185, 129, 0.1);
+	color: #10b981;
+}
+
+.statusBadge.inProgress {
+	background-color: rgba(211, 84, 0, 0.1);
+	color: #D35400;
+}
+
+.statusBadge.pending {
+	background-color: rgba(117, 120, 125, 0.1);
+	color: #75787D;
+}
+
+/* Review Button */
+.buttonReview {
+	background: #2f3336;
+	color: #ffffff;
+	border: 1px solid #4a4d51;
+	border-radius: 6px;
+	padding: 8px 20px;
+	font-size: 13px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+.buttonReview:hover {
+	background: #4a4d51;
+	border-color: #75787D;
+	transform: translateY(-1px);
+}
+
+/* ==========================================
+   MODERATE ISSUE MODAL
+   ========================================== */
+.moderateModalOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 2000;
+}
+
+.moderateModal {
+	background-color: #212224;
+	border: 1px solid #323639;
+	border-radius: 12px;
+	width: 540px;
+	max-height: 550px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+	padding: 0;
+	overflow: hidden;
+}
+
+.modalHeader {
+	padding: 24px 28px 16px;
+	border: none;
+}
+
+.modalBody {
+	padding: 20px 28px 24px;
+	overflow-y: auto;
+	flex: 1;
+	border: none;
+}
+
+.modalFooter {
+	padding: 20px 28px;
+	background-color: transparent;
+	border-top: none;
+}
+
+.moderateModal form {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	overflow: hidden;
+}
+
+/* Custom Scrollbar for Modal Body */
+.modalBody::-webkit-scrollbar {
+	width: 6px;
+}
+
+.modalBody::-webkit-scrollbar-track {
+	background: #13171A;
+}
+
+.modalBody::-webkit-scrollbar-thumb {
+	background: #323639;
+	border-radius: 10px;
+}
+
+.modalBody::-webkit-scrollbar-thumb:hover {
+	background: #D35400;
+}
+
+.modalClose {
+	position: absolute;
+	top: 24px;
+	right: 24px;
+	color: #75787D;
+	cursor: pointer;
+	background: none;
+	border: none;
+}
+
+.modalHeader h2 {
+	font-size: 24px;
+	font-weight: 700;
+	color: #D35400;
+	margin-bottom: 4px;
+}
+
+.modalHeader p {
+	font-size: 14px;
+	color: #75787D;
+	margin-bottom: 24px;
+}
+
+.formGroup {
+	margin-bottom: 24px;
+}
+
+.formLabel {
+	display: block;
+	font-size: 12px;
+	color: #75787D;
+	text-transform: uppercase;
+	font-weight: 600;
+	margin-bottom: 8px;
+}
+
+/* Category Select */
+.categorySelect {
+	width: 100%;
+	background-color: #13171A;
+	border: 1px solid #323639;
+	color: #ffffff;
+	padding: 12px 16px;
+	border-radius: 6px;
+	font-size: 14px;
+	outline: none;
+}
+
+.categoryReadonly {
+	background-color: #1a1d21;
+	border: 1px solid #323639;
+	color: #75787D;
+	padding: 12px 16px;
+	border-radius: 6px;
+	font-size: 14px;
+	cursor: not-allowed;
+	display: flex;
+	align-items: center;
+}
+
+/* Attachment Status */
+.attachmentStatus {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 16px;
+	border-radius: 6px;
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.attachmentStatus.found {
+	background-color: rgba(211, 84, 0, 0.1);
+	color: #D35400;
+	border: 1px solid rgba(211, 84, 0, 0.2);
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+.attachmentStatus.found:hover {
+	background-color: rgba(211, 84, 0, 0.15);
+	border-color: rgba(211, 84, 0, 0.3);
+}
+
+.attachmentStatus.none {
+	background-color: #1a1d21;
+	color: #75787D;
+	border: 1px dashed #323639;
+}
+
+/* User Description Box */
+.userDescriptionBox {
+	background-color: #1a1d21;
+	border-left: 3px solid #D35400;
+	color: #CFD3D6;
+	padding: 12px 16px;
+	border-radius: 0 6px 6px 0;
+	font-size: 13px;
+	line-height: 1.5;
+	font-style: italic;
+}
+
+.errorText {
+	color: #D32F2F;
+	font-size: 11px;
+	margin-top: 4px;
+	display: none;
+}
+
+.staffNotes.error {
+	border: 1px solid #D32F2F;
+}
+
+/* Status Selector (3 Buttons) */
+.statusSelector {
+	display: flex;
+	gap: 12px;
+}
+
+.statusSelector form {
+	flex: 1;
+	display: flex;
+}
+
+.statusSelector .statusButton {
+	flex: 1;
+	width: 100%;
+}
+
+.statusButton {
+	flex: 1;
+	background-color: transparent;
+	border: 2px solid #323639;
+	border-radius: 8px;
+	padding: 16px 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+	color: #75787D;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+.statusButton svg {
+	width: 24px;
+	height: 24px;
+}
+
+.statusButton.active {
+	border-color: #D35400;
+	background-color: rgba(211, 84, 0, 0.05);
+	color: #D35400;
+}
+
+/* Notes Textarea */
+.staffNotes {
+	width: 100%;
+	height: 120px;
+	background-color: #323639;
+	border: none;
+	border-radius: 8px;
+	padding: 16px;
+	color: #ffffff;
+	font-size: 14px;
+	resize: none;
+	outline: none;
+}
+
+/* Modal Footer */
+.modalFooter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 32px;
+}
+
+.buttonDeletePost {
+	background-color: #D32F2F;
+	color: #ffffff;
+	border: none;
+	border-radius: 6px;
+	padding: 12px 20px;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.buttonCancel {
+	background: none;
+	border: none;
+	color: #ffffff;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.buttonSaveChanges {
+	background: #d35400;
+	color: #fff;
+	border: none;
+	border-radius: 6px;
+	padding: 12px 24px;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: 0.2s;
+	box-shadow: 0 4px 12px rgba(211, 84, 0, 0.2);
+}
+
+.buttonSaveChanges:hover {
+	background: #b84300;
+}
+
+/* ==========================================
+   DELETE / CONFIRM MODAL
+   ========================================== */
+.dangerModal {
+	background-color: #212224;
+	border: 1px solid #323639;
+	border-radius: 12px;
+	width: 460px;
+	position: relative;
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+	overflow: hidden;
+}
+
+.dangerModalHeader {
+	background-color: #7f1d1d;
+	padding: 20px 32px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.dangerModalHeader h2 {
+	font-size: 20px;
+	font-weight: 700;
+	color: #ffffff;
+	margin: 0;
+}
+
+.dangerModalBody {
+	padding: 32px;
+}
+
+.dangerModalBody p {
+	font-size: 15px;
+	color: #CFD3D6;
+	margin-top: 0;
+	margin-bottom: 24px;
+	line-height: 1.6;
+}
+
+.dangerModalFooter {
+	padding: 20px 32px;
+	display: flex;
+	justify-content: flex-end;
+	gap: 16px;
+	background-color: transparent;
+	border-top: none;
+}
+
+.buttonConfirmDanger {
+	background: #dc2626;
+	color: #fff;
+	border: 0;
+	border-radius: 6px;
+	padding: 10px 20px;
+	font: 600 14px sans-serif;
+	cursor: pointer;
+	transition: 0.2s;
+	box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+}
+
+.buttonConfirmDanger:hover {
+	background: #b91c1c;
+}
+
+@media ( max-width : 768px) {
+	.issueStatsContainer {
+		flex-direction: column;
+		gap: 12px;
+	}
+	.issueStatCard {
+		height: auto;
+		padding: 16px;
+	}
+	.issueRow {
+		flex-wrap: wrap;
+		gap: 12px;
+		padding: 16px;
+	}
+	.issueDetails {
+		width: 100%;
+	}
+	.issueMeta {
+		flex-wrap: wrap;
+	}
+	.buttonReview {
+		width: 100%;
+	}
+	.moderateModal {
+		width: 100%;
+		margin: 16px;
+		max-height: 90vh;
+	}
+	.statusSelector {
+		flex-direction: column;
+	}
+	.dangerModal {
+		width: 100%;
+		margin: 16px;
+	}
+}

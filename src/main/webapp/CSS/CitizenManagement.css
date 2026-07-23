@@ -1,0 +1,566 @@
+@charset "UTF-8";
+
+/* Layout */
+.twoColumnLayout {
+	display: flex;
+	gap: 32px;
+	align-items: flex-start;
+}
+
+.leftColumn {
+	flex: 1;
+	min-width: 0;
+}
+
+.rightColumn {
+	width: 440px;
+	flex-shrink: 0;
+	position: sticky;
+	top: 100px;
+}
+
+.pageHeader {
+	margin-bottom: 16px;
+}
+
+.pageTitle {
+	font-size: 28px;
+	font-weight: 700;
+	color: #ffffff;
+	margin-bottom: 5px;
+}
+
+.pageSubtitle {
+	font-size: 14px;
+	color: #75787D;
+}
+
+.divider {
+	height: 1px;
+	background-color: #323639;
+	margin-bottom: 28px;
+	border: none;
+}
+
+/* Adjust stats cards for smaller layout */
+.smallStats {
+	gap: 16px !important;
+}
+
+.statCardSmall {
+	height: 90px !important;
+	padding: 16px !important;
+	gap: 16px !important;
+}
+
+.statCardSmall .statValue {
+	font-size: 20px !important;
+}
+
+.searchForm {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.searchInput {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #323639;
+    background: #1e2025;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+}
+
+.searchInput:focus {
+    border-color: #D35400;
+}
+
+.searchForm .buttonCancel {
+    padding: 8px 14px;
+    font-size: 12px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+/* =====  CITIZEN LIST PAGE  ===== */
+.citizenList {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.citizenCard {
+	background-color: #212224;
+	border: 1px solid #323639;
+	border-radius: 10px;
+	padding: 20px 24px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	transition: border-color 0.2s;
+}
+
+.citizenCard:hover {
+	border-color: #D35400;
+}
+
+.citizenInfo {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+}
+
+.avatarBox {
+	width: 44px;
+	height: 44px;
+	background-color: #2c2e31;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #D35400;
+	flex-shrink: 0;
+}
+
+.nameGroup h3 {
+	font-size: 15px;
+	font-weight: 600;
+	color: #ffffff;
+	margin-bottom: 2px;
+}
+
+.nameGroup p {
+	font-size: 12px;
+	color: #75787D;
+}
+
+.roleTag {
+	font-size: 10px;
+	font-weight: 700;
+	color: #75787D;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	background: #2c2e31;
+	padding: 4px 8px;
+	border-radius: 4px;
+}
+
+.buttonReview {
+	background-color: #D35400;
+	color: #ffffff;
+	border: none;
+	border-radius: 6px;
+	padding: 8px 18px;
+	font-size: 12px;
+	font-weight: 700;
+	cursor: pointer;
+	text-transform: uppercase;
+	text-decoration: none;
+	display: inline-block;
+}
+
+/* ===== CITIZEN PROFILE PAGE ===== */
+.emptyStatePanel {
+	background-color: #212224;
+	border: 1px dashed #323639;
+	border-radius: 12px;
+	padding: 48px 24px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	min-height: 400px;
+	margin-top: 24px;
+}
+
+.profilePanel {
+	background-color: #212224;
+	border: 1px solid #323639;
+	border-radius: 12px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.profileHeader {
+	padding: 20px 24px;
+	border-bottom: 1px solid #323639;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.closeProfileButton {
+	color: #75787D;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	border-radius: 6px;
+	transition: color 0.2s, background-color 0.2s;
+}
+
+.closeProfileButton:hover {
+	color: #ffffff;
+	background-color: #323639;
+}
+
+.profileTitle {
+	font-size: 16px;
+	font-weight: 600;
+	color: #ffffff;
+}
+
+.profileSummary {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	padding: 28px 24px 20px 24px;
+	border-bottom: 1px solid #323639;
+}
+
+.largeAvatar {
+	width: 72px;
+	height: 72px;
+	background-color: #D35400;
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #ffffff;
+	position: relative;
+	flex-shrink: 0;
+}
+
+.statusDot {
+	width: 12px;
+	height: 12px;
+	background-color: #10b981;
+	border: 2px solid #212224;
+	border-radius: 50%;
+	position: absolute;
+	bottom: -3px;
+	right: -3px;
+}
+
+.profileName {
+	font-size: 22px;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.profileDetails {
+	padding: 20px 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	border-bottom: 1px solid #323639;
+}
+
+.detailRow {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+}
+
+.detailLabel {
+	color: #75787D;
+	width: 110px;
+	flex-shrink: 0;
+}
+
+.detailValue {
+	color: #ffffff;
+	font-weight: 500;
+}
+
+/* Tabs */
+.tabBar {
+	display: flex;
+	gap: 24px;
+	padding: 0 24px;
+	border-bottom: 1px solid #323639;
+	margin-top: 4px;
+}
+
+.tabItem {
+	padding: 14px 0;
+	font-size: 14px;
+	font-weight: 600;
+	color: #75787D;
+	cursor: pointer;
+	border-bottom: 2px solid transparent;
+}
+
+.tabItem.active {
+	color: #ffffff;
+	border-bottom: 2px solid #D35400;
+}
+
+.tabPanel {
+	display: none;
+	padding: 20px 24px;
+}
+
+.tabPanel.active {
+	display: block;
+}
+
+.panelSectionLabel {
+	font-size: 12px;
+	color: #75787D;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin-bottom: 12px;
+}
+
+/* Record Cards (Issues & Fines) */
+.recordCard {
+	background-color: #1a1c1e;
+	border: 1px solid #323639;
+	border-radius: 8px;
+	padding: 14px 16px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 10px;
+}
+
+.recordIconBox {
+	width: 36px;
+	height: 36px;
+	background-color: #2c2e31;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #D35400;
+	flex-shrink: 0;
+}
+
+.recordInfo {
+	flex: 1;
+}
+
+.recordInfo h4 {
+	font-size: 13px;
+	color: #ffffff;
+	margin-bottom: 3px;
+}
+
+.recordInfo p {
+	font-size: 11px;
+	color: #75787D;
+}
+
+.mutedText {
+	color: #75787D;
+	font-weight: 400;
+}
+
+.badgeStatus {
+	font-size: 9px;
+	font-weight: 700;
+	padding: 4px 8px;
+	border-radius: 4px;
+	text-transform: uppercase;
+	flex-shrink: 0;
+}
+
+.badgeSuccess {
+	color: #10b981;
+	background: rgba(16, 185, 129, 0.1);
+}
+
+.badgePaid {
+	color: #10b981;
+	background: rgba(16, 185, 129, 0.1);
+}
+
+/* Suspend Area */
+.suspendArea {
+	padding: 20px 24px 28px 24px;
+	border-top: 1px solid #323639;
+}
+
+.buttonSuspend {
+	width: 100%;
+	background: transparent;
+	border: 1px solid #D35400;
+	color: #ffffff;
+	padding: 12px;
+	border-radius: 8px;
+	font-size: 13px;
+	font-weight: 700;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: background-color 0.2s;
+}
+
+.buttonSuspend:hover {
+	background-color: #D35400;
+}
+
+.buttonUnsuspend {
+	width: 100%;
+	background: transparent;
+	border: 1px solid #22c55e;
+	color: #ffffff;
+	padding: 12px;
+	border-radius: 8px;
+	font-size: 13px;
+	font-weight: 700;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: background-color 0.2s;
+}
+
+.buttonUnsuspend:hover {
+	background-color: #22c55e;
+}
+
+/* ===== SUSPENSION MODAL ===== */
+.modalOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.85);
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 2000;
+}
+
+.modalBox {
+	background: #212224;
+	border: 1px solid #323639;
+	border-radius: 12px;
+	width: 480px;
+	overflow: hidden;
+}
+
+.modalHeaderRed {
+	background: #7f1d1d;
+	padding: 16px 24px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.modalHeaderRed h2 {
+	font-size: 18px;
+	font-weight: 700;
+	color: #ffffff;
+	margin: 0;
+}
+
+.modalBody {
+	padding: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.modalText {
+	font-size: 14px;
+	color: #CFD3D6;
+	line-height: 1.6;
+	margin: 0;
+}
+
+.labelArea {
+	font-size: 11px;
+	font-weight: 700;
+	color: #75787D;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.modalTextarea {
+	width: 100%;
+	height: 110px;
+	background: #131517;
+	border: 1px solid #323639;
+	border-radius: 8px;
+	padding: 12px;
+	color: #ffffff;
+	font-size: 14px;
+	resize: none;
+	outline: none;
+	font-family: inherit;
+}
+
+.modalTextarea:focus {
+	border-color: #D35400;
+}
+
+.validationError {
+	color: #ef4444;
+	font-size: 12px;
+	margin: 0;
+	display: none;
+}
+
+.modalFooter {
+	padding: 12px 24px 20px 24px;
+	display: flex;
+	justify-content: flex-end;
+	gap: 12px;
+}
+
+.buttonCancel {
+	background: #323639;
+	color: #ffffff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.buttonConfirmRed {
+	background: #ef4444;
+	color: #ffffff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+@media ( max-width : 768px) {
+	.twoColumnLayout {
+		flex-direction: column;
+	}
+	.rightColumn {
+		width: 100%;
+		position: static;
+	}
+	.citizenCard {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 12px;
+	}
+	.citizenInfo {
+		width: 100%;
+	}
+	.buttonReview {
+		width: 100%;
+		text-align: center;
+	}
+	.modalBox {
+		width: 100%;
+		margin: 16px;
+	}
+	.modalBody, .modalFooter {
+		padding: 16px;
+	}
+}

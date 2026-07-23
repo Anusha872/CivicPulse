@@ -1,0 +1,552 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: #FFFFFF;
+    color: #222222;
+    line-height: 1.5; /* Increased global line spacing */
+}
+
+/* MAIN LAYOUT */
+.mainContent {
+    margin-left: 250px;
+    padding-top: 72px;
+    min-height: 100vh;
+    background: #FFFFFF;
+}
+
+.dashboardArea {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 28px 24px 60px;
+}
+
+/* TITLES - Made bigger */
+.sectionTitle {
+    font-size: 22px; /* Increased from 17px */
+    font-weight: 700;
+    color: #1E1E1E;
+    margin: 0;
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.viewAllLink {
+    text-decoration: none;
+    color: #C05A2A;
+    font-size: 14px; /* Slightly larger */
+    font-weight: 600;
+}
+
+.viewAllLink:hover {
+    opacity: 0.8;
+}
+
+/* SERVICES */
+.servicesSection {
+    margin-bottom: 48px;
+}
+
+.servicesList {
+    display: flex;
+    justify-content: space-between;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.serviceItem {
+    flex: 1;
+    min-width: 170px;
+    max-width: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.serviceItem:hover {
+    transform: translateY(-3px);
+}
+
+.serviceIconBox {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    background: #F8F2EE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #C05A2A;
+    transition: 0.2s ease;
+}
+
+.serviceItem:hover .serviceIconBox {
+    background: #F3E6DF;
+}
+
+.serviceIconBox svg {
+    stroke: #C05A2A;
+}
+
+.serviceLabel {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1F1F1F;
+    text-align: center;
+}
+
+/* ACTIVITY */
+.activityContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    margin-bottom: 36px;
+}
+
+.activitySection {
+    width: 100%;
+}
+
+/* ISSUES (My Issues) */
+.issuesList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.issueCard {
+    width: 100%;
+    min-height: 72px;
+    border: 1px solid #ECECEC;
+    border-radius: 12px;
+    background: #FFFFFF;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.issueCard:hover {
+    border-color: #C05A2A;
+    background: #FFF9F6;
+}
+
+.issueLeft {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 1;
+}
+
+.issueIcon {
+    color: #C05A2A;
+    stroke-width: 1.8;
+    flex-shrink: 0;
+}
+
+.issueInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.issueTitle {
+    font-size: 15px;
+    font-weight: 500;
+    color: #222222;
+}
+
+.issueLocation {
+    font-size: 12px;
+    color: #999999;
+}
+
+.statusBadge {
+    min-width: 110px;
+    text-align: center;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* STATUS COLORS */
+.badgePending {
+    background: #FFF6E8;
+    color: #B7791F;
+}
+
+.badgeApproved {
+    background: #EAF5E3;
+    color: #4F7D35;
+}
+
+.badgeRejected {
+    background: #FCEAEA;
+    color: #C0392B;
+}
+
+.badgeUnderReview {
+    background: #FFF6E8;
+    color: #B7791F;
+}
+
+/* FINES */
+.finesList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.fineCard {
+    width: 100%;
+    border: 1px solid #ECECEC;
+    border-radius: 12px;
+    background: #FFFFFF;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fineInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.fineTitle {
+    font-size: 15px;
+    font-weight: 500;
+    color: #222222;
+}
+
+.fineDesc {
+    font-size: 13px;
+    color: #999999;
+    line-height: 1.5; /* Increased line spacing for fine description */
+}
+
+.fineStatusBadge {
+    width: fit-content;
+    margin-top: 6px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: #FCEAEA;
+    color: #D93025;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.fineAction {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+}
+
+.fineAmount {
+    font-size: 24px; /* Reduced from 32px to make "500" smaller */
+    font-weight: 600;
+    color: #D93025;
+}
+
+.payFineButton {
+    border: none;
+    background: #D93025;
+    color: #FFFFFF;
+    padding: 8px 16px;
+    border-radius: 6px; /* Slightly more rounded */
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.payFineButton:hover {
+    background: #b82218;
+    transform: translateY(-1px);
+}
+
+/* BOTTOM CARDS */
+.bottomCards {
+    display: flex;
+    gap: 22px;
+}
+
+/* POLL */
+.pollCard {
+    flex: 2;
+    border: 1px solid #ECECEC;
+    border-radius: 18px;
+    background: #FFFFFF;
+    padding: 26px 34px;
+    transition: 0.2s ease;
+}
+
+.pollCard[onclick] {
+    cursor: pointer;
+}
+
+.pollCard[onclick]:hover {
+    border-color: #C05A2A;
+    background: #FFF9F6;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.pollIconWrap,
+.reportIconBox {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: #F8F2EE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pollIconWrap svg,
+.reportIconBox svg {
+    stroke: #C05A2A;
+}
+
+.cardTitle {
+    font-size: 18px; /* Slightly larger */
+    font-weight: 700;
+    color: #222222;
+    margin: 0;
+}
+
+.pollQuestion {
+    font-size: 15px;
+    line-height: 1.6; /* Increased line spacing */
+    color: #333333;
+    margin-bottom: 28px;
+}
+
+.pollOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.pollOption {
+    width: 100%;
+    min-height: 54px;
+    border: 1px solid #E8E8E8;
+    border-radius: 8px;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    transition: 0.2s ease;
+}
+
+.pollOption:hover {
+    border-color: #C05A2A;
+    background: #FFF9F6;
+}
+
+.pollOptionText {
+    font-size: 14px;
+    color: #333333;
+}
+
+.radioCircle {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #9B7766;
+    border-radius: 50%;
+}
+
+/* CONTACT US CARD (formerly report card) */
+.reportCard {
+    flex: 1;
+    border: 1px solid #ECECEC;
+    border-radius: 18px;
+    background: #FFFFFF;
+    padding: 28px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.reportTitle {
+    font-size: 22px; /* Increased for emphasis */
+    font-weight: 700;
+    color: #222222;
+    margin: 20px 0 12px;
+    line-height: 1.3;
+}
+
+.reportDesc {
+    font-size: 15px;
+    color: #5a4a3f;
+    line-height: 1.6; 
+    margin-bottom: 28px;
+    max-width: 280px;
+}
+
+.reportButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 164px;
+    height: 48px;
+    background: #B24A00;
+    color: #FFFFFF;
+    border-radius: 40px; /* Pill shape - more modern */
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.reportButton:hover {
+    background: #8f3a00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(192, 90, 42, 0.15);
+}
+
+.reportButton:active {
+    transform: translateY(0);
+}
+
+/* EMPTY STATE */
+.emptyState {
+    width: 100%;
+    min-height: 220px;
+    border: 1px dashed #DADADA;
+    border-radius: 18px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+    padding: 30px;
+}
+
+.emptyState svg {
+    stroke: #C05A2A;
+}
+
+.emptyState p {
+    margin: 0;
+    font-size: 15px;
+    color: #666666;
+    line-height: 1.5;
+}
+
+.emptyState a {
+    color: #C05A2A;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.emptyState a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+    .servicesList {
+        justify-content: flex-start;
+    }
+
+    .bottomCards {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainContent {
+        margin-left: 0;
+        padding-top: 70px;
+    }
+
+    .dashboardArea {
+        padding: 24px 16px 50px;
+    }
+
+    .servicesList {
+        gap: 26px;
+        justify-content: center;
+    }
+
+    .serviceItem {
+        min-width: 140px;
+    }
+
+    .issueCard,
+    .fineCard {
+        padding: 16px 18px;
+    }
+
+    .fineCard {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .fineAction {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 520px) {
+    .serviceItem {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .issueCard {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .statusBadge {
+        min-width: unset;
+        align-self: flex-start;
+    }
+
+    .pollCard,
+    .reportCard {
+        padding: 22px 18px;
+    }
+    
+    .sectionTitle {
+        font-size: 20px; 
+    }
+}

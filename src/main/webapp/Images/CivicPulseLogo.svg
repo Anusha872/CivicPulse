@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pulseGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6B6B" />
+      <stop offset="100%" stop-color="#4ECDC4" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background is transparent, but we can add a white rect if requested. 
+       The user asked to "remove its bg and make it white". 
+       Usually transparent is best for navbars, but let's make it a clean white box just in case, 
+       or just leave it transparent so it fits any white header. The header is likely white anyway. 
+       I'll omit the background rect to let the header color show through. -->
+
+  <!-- Pulse Icon -->
+  <path d="M 30 50 L 50 50 L 65 20 L 85 80 L 100 50 L 120 50" 
+        fill="none" 
+        stroke="url(#pulseGradient)" 
+        stroke-width="8" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" />
+
+  <!-- Text -->
+  <text x="140" y="75" font-family="Arial, Helvetica, sans-serif" font-size="80" font-weight="bold" fill="#2C3E50">
+    Civic<tspan font-weight="300" fill="#E67E22">Pulse</tspan>
+  </text>
+</svg>

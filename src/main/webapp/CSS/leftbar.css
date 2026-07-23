@@ -1,0 +1,234 @@
+.menuWrapper {
+    position: relative;
+    margin-top: auto;
+    padding: 24px 16px;
+}
+
+.menuDropdown {
+    position: absolute;
+    bottom: 86px;
+    left: 16px;
+    right: 16px;
+    background-color: #F0F0F0;
+    border: 1px solid #E0E0E0;
+    border-radius: 16px;
+    margin-bottom: 0px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    z-index: 100;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    pointer-events: none;
+}
+
+.menuDropdown.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.menuDropdown ul {
+    list-style: none;
+    padding: 8px;
+    margin: 0;
+}
+
+.menuDropdown li a {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    color: #666666;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.menuDropdown li a:hover {
+    background-color: #E6E6E6;
+    color: #E86A33;
+}
+
+/* Styling for the menu link */
+.menuLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none; 
+    color: #4B4B4B;       
+    padding: 12px 16px;   
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;           
+    transition: background-color 0.2s ease;
+}
+
+/* Hover state */
+.menuLink:hover {
+    background-color: #F5F5F5;
+    color: #1a1a1b;
+}
+
+.dropdownItem {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.userProfile {
+    cursor: pointer;
+}
+
+.sidebar {
+    width: 250px;
+    min-width: 250px;
+    background-color: #FAFAFA;
+    border-right: 1px solid #E0E0E0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    bottom: 0px;
+    left: 0px;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+.sidebarLogo {
+    display: flex;
+    align-items: center;
+    padding: 24px 24px 0px 24px;
+    text-decoration: none;
+    margin-bottom: 32px;
+    transition: opacity 0.2s;
+}
+
+.sidebarLogo:hover {
+    opacity: 0.8;
+}
+
+.sidebarLogoImage {
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+}
+
+.sidebarSectionLabel {
+    font-size: 11px;
+    font-weight: 600;
+    color: #888888;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 20px 24px 8px 24px;
+    margin: 0px;
+    height: 39px;
+    box-sizing: border-box;
+}
+
+.sidebarNavigation {
+    list-style: none;
+    padding: 0px 16px;
+    margin: 0px;
+}
+
+.sidebarNavigation li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    margin-bottom: 4px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #888888;
+    font-weight: 500;
+    height: 40px;
+    box-sizing: border-box;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.sidebarNavigation li a:hover {
+    background-color: #F0F0F0;
+    color: #333333;
+}
+
+.sidebarNavigation li a.active {
+    background-color: #F0EAE1;
+    color: #333333;
+    font-weight: 600;
+}
+
+.sidebarNavigation li a.active .navigationIcon svg {
+    stroke: #C05A2A;
+}
+
+.navigationIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+}
+
+.sidebarFooter {
+    margin-top: auto;
+    padding: 24px 16px;
+}
+
+.userProfile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: #F0F0F0;
+    cursor: pointer;
+    border: 1px solid #E0E0E0;
+}
+
+.userAvatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 9999px;
+    background-color: #E86A33;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.userName {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.userRole {
+    font-size: 11px;
+    color: #888888;
+}
+
+.viewButton {
+    color: #0095f6;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+}

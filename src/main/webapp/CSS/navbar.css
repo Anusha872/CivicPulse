@@ -1,0 +1,118 @@
+.topbar {
+    background-color: #FAFAFA;
+    border-bottom: 1px solid #E0E0E0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 32px;
+    height: 70px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    z-index: 100;
+}
+
+.topbarLeft {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.sidebarToggleButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.sidebarToggleButton:hover {
+    background: #EAEAEA;
+}
+
+.navbarLogo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.navbarLogo:hover {
+    opacity: 0.8;
+}
+
+.navbarLogoImage {
+    width: 140px;
+    height: auto;
+    object-fit: contain;
+}
+
+.topbarCenter {
+    position: fixed;
+    left: calc(50% + 125px);
+    top: 35px;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+@media (max-width: 768px) {
+    .topbarCenter {
+        left: 50%;
+    }
+}
+
+.topbarCenter h1,
+.topbarCenter .currentPageTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: grey;
+    margin: 0;
+}
+
+.topbarRight {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: auto;
+}
+
+.bellIcon {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+.bellIcon:hover {
+    color: #E86A33;
+}
+
+.notificationDropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    margin-top: 10px;
+    width: 220px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.notificationText {
+    padding: 16px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}

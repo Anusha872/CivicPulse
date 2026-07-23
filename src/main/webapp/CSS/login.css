@@ -1,0 +1,242 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.LoginBox {
+    display: flex;
+    min-height: 100vh;
+}
+
+.loginQuote {
+    flex: 1.15;
+    background-color: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+.loginText {
+    max-width: 500px;
+    width: 500px;
+    padding-left: 60px;
+}
+
+.loginHeader {
+    font-family: 'Playfair Display', serif;
+    color: #ffffff;
+    font-size: 80px;
+    line-height: 1.1;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -1px;
+}
+
+.loginHeader .loginHeader2 {
+    color: #A04015;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.loginPanel {
+    flex: 0.85;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.loginForm {
+    width: 360px;
+    max-width: 360px;
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+.loginPanel h2 {
+    font-size: 36px;
+    color: #202020;
+    margin: 0 0 40px 0;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.errorMessage {
+    background-color: #fdf2f2;
+    color: #A04015;
+    padding: 13px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid #f6d2d2;
+}
+
+.formGroup {
+    margin-bottom: 24px;
+}
+
+.formLabel {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+.formLabel label {
+    margin: 0;
+}
+
+.forgotLink {
+    color: #A04015;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    display: block;
+    margin-top: 8px;
+    text-align: right;
+}
+
+.forgotLink:hover {
+    text-decoration: underline;
+}
+
+.formControl {
+    width: 100%;
+    padding: 14px 16px;
+    border: none;
+    background-color: #F8F8F8;
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: inherit;
+    color: #333333;
+    outline: none;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+.formControl::placeholder {
+    color: #A0A0A0;
+}
+
+.formControl:focus {
+    background-color: #F0F0F0;
+    box-shadow: 0 0 0 2px rgba(160, 64, 21, 0.2);
+}
+
+.checkboxGroup {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.checkboxGroup input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0 10px 0 0;
+    accent-color: #A04015;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.checkboxGroup label {
+    font-size: 14px;
+    color: #555555;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.loginButton {
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.loginBtnPrimary {
+    background-color: #A04015;
+    color: #ffffff;
+    border: none;
+}
+
+.loginBtnPrimary:hover {
+    background-color: #8C3610;
+}
+
+.loginBtnSecondary {
+    background-color: #ffffff;
+    color: #A04015;
+    border: 1px solid #E5E5E5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.loginBtnSecondary:hover {
+    background-color: #FAFAFA;
+    border-color: #D0D0D0;
+}
+
+.loginDivider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 32px 0;
+}
+
+.loginDivider::before,
+.loginDivider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.loginDivider span {
+    padding: 0 16px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #A0A0A0;
+}
+
+@media screen and (max-width: 768px) {
+    .LoginBox {
+        flex-direction: column;
+    }
+
+    .loginQuote {
+        min-height: 400px;
+        padding: 48px 32px;
+    }
+
+    .loginText {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .loginHeader {
+        font-size: 48px;
+    }
+
+    .loginPanel {
+        padding: 32px 0;
+    }
+}
